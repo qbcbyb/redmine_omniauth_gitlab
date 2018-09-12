@@ -94,7 +94,7 @@ class RedmineOauthController < AccountController
   end
 
   def settings
-    @settings ||= Setting.plugin_redmine_omniauth_gitlab
+    @settings = Setting.plugin_redmine_omniauth_gitlab
   end
 
 end
