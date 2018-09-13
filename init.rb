@@ -7,7 +7,7 @@ Redmine::Plugin.register :redmine_omniauth_gitlab do
   description 'This is a plugin for Redmine registration through gitlab'
   version '0.0.1'
   url 'https://github.com/qbcbyb/redmine_omniauth_gitlab'
-  author_url 'http://hydrant.ink'
+  author_url 'https://github.com/qbcbyb'
 
   settings :default => {
     :site => "",
