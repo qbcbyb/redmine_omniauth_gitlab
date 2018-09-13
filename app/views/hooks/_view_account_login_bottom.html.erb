@@ -1,7 +1,5 @@
 <%= stylesheet_link_tag 'buttons', :plugin => 'redmine_omniauth_gitlab' %>
 
-<% puts(Setting.plugin_redmine_omniauth_gitlab) %>
-
 <% if Setting.plugin_redmine_omniauth_gitlab[:oauth_authentification] %>
   <%= link_to oauth_gitlab_path(:back_url => back_url) do %>
     <%= button_tag :class => 'button-login' do %>
