@@ -48,7 +48,9 @@ class RedmineOauthController < AccountController
       # Create on the fly
       user.firstname, user.lastname = info["name"].split(' ') unless info['name'].nil?
       user.firstname ||= info[:given_name]
+      user.firstname ||= "NoName"
       user.lastname ||= info[:family_name]
+      user.lastname ||= "NoName"
       user.mail = info["email"]
       user.login = info["username"]
       user.random_password
