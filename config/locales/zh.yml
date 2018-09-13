@@ -1,4 +1,4 @@
-en:
+zh:
   notice_unable_to_obtain_gitlab_credentials: "gitlab认证失败"
   notice_domain_not_allowed: "域名%{domain}不被允许"
   notice_access_denied: "管理员尚未开放gitlab认证"
