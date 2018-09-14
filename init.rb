@@ -18,9 +18,8 @@ Redmine::Plugin.register :redmine_omniauth_gitlab do
     :register_enable => false
   }, :partial => 'settings/gitlab_settings'
 
-  Redmine::MenuManager.items(:account_menu).root.children.each do |node|
-    if node.name == :register 
-      node.@condition = Proc.new { !User.current.logged? && Setting.self_registration? && !Setting.plugin_redmine_omniauth_gitlab['register_enable'] }
-    end
+  Redmine::MenuManager.map :account_menu do |menu|
+    menu.delete :register
+    menu.push :register, :register_path, :if => Proc.new { !User.current.logged? && Setting.self_registration? && !Setting.plugin_redmine_omniauth_gitlab['register_enable'] }
   end
 end
